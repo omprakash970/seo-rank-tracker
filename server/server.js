@@ -10,7 +10,10 @@ dns.setServers([
 ]);
 
 
-connectDB()
+connectDB().then(()=>{
+    console.log("Connected!");
+})
+
 
 const app = experss();
 app.use(cors());
